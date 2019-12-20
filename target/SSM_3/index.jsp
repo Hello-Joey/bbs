@@ -46,5 +46,6 @@
 <body>
 <div id="info"></div>
 <button type="button" class="btn btn-primary">（首选项）Primary</button>
+<a href="${pageContext.request.contextPath}/self">点击链接跳转</a>
 </body>
 </html>

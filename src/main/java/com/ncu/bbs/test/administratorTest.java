@@ -1,7 +1,9 @@
 package com.ncu.bbs.test;
 
 import com.ncu.bbs.bean.Administrator;
+import com.ncu.bbs.bean.User;
 import com.ncu.bbs.services.impl.AdministratorServiceImpl;
+import com.ncu.bbs.services.impl.SelfInfoServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ public class administratorTest {
     AdministratorServiceImpl administratorService;
     @Autowired
     com.ncu.bbs.dao.AdministratorMapper administratorMapper;
+    @Autowired
+    SelfInfoServiceImpl selfInfoService;
     @Test
     public void insertAdministrator(){
         Administrator administrator=new Administrator();
@@ -29,8 +33,9 @@ public class administratorTest {
 }
     @Test
     public void  selectAllAdministrator(){
-        List<Administrator> list=administratorService.selectAllAdministrator();
-        administratorMapper.deleteByPrimaryKey(1);
-        System.out.println(list.get(1));
+//        List<Administrator> list=administratorService.selectAllAdministrator();
+//        administratorMapper.deleteByPrimaryKey(1);
+//        System.out.println(list.get(1));
+//        selfInfoService.saveAllselfInfo(new User("1sadsda","2","3","4"));
     }
 }
